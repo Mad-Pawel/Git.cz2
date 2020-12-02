@@ -15,11 +15,29 @@ public class Main {
             System.out.println(x);
         }
     }
+    static void sortBabelkowe(int []tab)
+    {
+        for(int i = 0; i < tab.length;i++)
+        {
+            for (int j =0 ; j < tab.length; j++)
+            {
+                if(tab[j] > tab[i])
+                {
+                    int tmp = tab[i];
+                    tab[i] = tab[j];
+                    tab[j] = tmp;
+                }
+            }
+        }
+
+
+    }
 
     public static void main(String[] args) {
 	int []tab = {1,2,3,4,12,54,-5};
 
 	zamiana(tab,0,2);
+        sortBabelkowe(tab);
 	wypisz(tab);
 
     }
