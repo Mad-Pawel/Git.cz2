@@ -22,11 +22,8 @@ public class Main {
             for (int j =0 ; j < tab.length; j++)
             {
                 if(tab[j] > tab[i])
-                {
-                    int tmp = tab[i];
-                    tab[i] = tab[j];
-                    tab[j] = tmp;
-                }
+                    zamiana(tab,i,j);
+
             }
         }
 
