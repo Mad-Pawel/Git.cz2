@@ -46,7 +46,7 @@ public class Main {
             return index;
         }
         System.out.println("Out of index");
-        return 0;
+        return -1;
 
 
     }
@@ -57,7 +57,7 @@ public class Main {
         //sortBabelkowe(tab);
 	int min = znaidzmin(tab,2);
 	System.out.println(min);
-
+	//Testowaniem z gitem
 	/*System.out.println("Pierwsza");
 	wypisz(tab);
         sortBabelkowe(tab);
