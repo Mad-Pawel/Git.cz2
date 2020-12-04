@@ -29,13 +29,41 @@ public class Main {
 
 
     }
+    static int znaidzmin(int []tab , int i) {
+        if (i <= tab.length - 1)
+        {
+            int min = tab[i];
+            int index = i;
+            for(;i < tab.length; i++)
+            {
+                if(min > tab[i])
+                {
+                    min = tab[i];
+                    index = i;
+                }
+
+            }
+            return index;
+        }
+        System.out.println("Out of index");
+        return 0;
+
+
+    }
 
     public static void main(String[] args) {
-	int []tab = {1,2,3,4,12,54,-5};
+	int []tab = {1,-15,3,4,12,54,-5,10,-12};
 
-	zamiana(tab,0,2);
-        sortBabelkowe(tab);
+        //sortBabelkowe(tab);
+	int min = znaidzmin(tab,2);
+	System.out.println(min);
+
+	/*System.out.println("Pierwsza");
 	wypisz(tab);
+        sortBabelkowe(tab);
+        System.out.println("Druga");
+	wypisz(tab);*/
+	
 
     }
 }
