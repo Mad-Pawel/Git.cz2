@@ -29,7 +29,7 @@ public class Main {
 
 
     }
-    static int znaidzmin(int []tab , int i) {
+    static int znajdzmin(int []tab , int i) {
         if (i <= tab.length - 1)
         {
             int min = tab[i];
@@ -47,22 +47,53 @@ public class Main {
         }
         System.out.println("Out of index");
         return -1;
+    }
+    static void Sortuj(int tab[])
+    {
+        int j = tab.length -1;
+        int x;
+        int i;
+
+        while (j >= 0)
+        {
+            boolean check = true;
+            x = tab[j];
+            i = j+1;
+            while(i <= tab.length -1)
+            {
+                if(x <= tab[i])
+                {
+                    tab[i-1] = x;
+                    j--;
+                    check = false;
+                    break;
+                }
+                else
+                {
+                    tab[i-1] = tab[i];
+                    i++;
+                }
+
+            }
+            if (check){
+            tab[i-1] = x;
+            j--;
+            }
+
+
+        }
 
 
     }
 
+
     public static void main(String[] args) {
 	int []tab = {1,-15,3,4,12,54,-5,10,-12};
 
-        //sortBabelkowe(tab);
-	int min = znaidzmin(tab,2);
-	System.out.println(min);
-	//Testowaniem z gitem
-	/*System.out.println("Pierwsza");
 	wypisz(tab);
-        sortBabelkowe(tab);
-        System.out.println("Druga");
-	wypisz(tab);*/
+	Sortuj(tab);
+	System.out.println("Posrotowane:");
+	wypisz(tab);
 	
 
     }
